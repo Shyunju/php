@@ -1,0 +1,28 @@
+<style>
+	table{
+		border:solid 5px red;
+		width:500;
+		color:blue;
+	}
+	td{
+		border:solid 1px green;
+	}
+</style>
+<h1> 2~5단까지의 구구단 표 </h1>
+<table>
+	<tr>
+		<th>2단</th> <th>3단</th> <th>4단</th> <th>5단</th>
+	</tr>
+	<?php
+		for($s=1; $s<=9; $s++){
+			echo"<tr>";
+			for($v=2; $v<=5; $v++){
+				$result=$v*$s;
+
+				echo"<td>$v x $s = $result</td>";
+			}
+			echo"</tr>";
+		}
+	?>
+
+

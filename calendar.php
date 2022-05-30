@@ -92,12 +92,17 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
             border-top: 15px solid black;
         }
 
-        tr,
         td,
         th {
             border-collapse: collapse;
             border: 1px solid black;
-            width: 90px;
+            width: 200px;
+        }
+        tr {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
         }
 
         .reserv {

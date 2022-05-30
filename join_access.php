@@ -1,9 +1,9 @@
 <?php
     $conn = mysqli_connect("localhost", "root", "hj990814", "hyunju");
 
-    $filtered = array('uname'=>mysqli_real_escape_string($conn, $_POST['uname']), 
-                        'id'=>mysqli_real_escape_string($conn, $_POST['id']));
-    $sql = "SELECT * FROM umaster WHERE id='{$filtered['id']}'";
+    $id=$_POST["id"];
+    $uname = $_POST["uname"];
+    $pwd =$_POST["pwd"];
     // $result = mysqli_query($conn, $sql);
     // $row = mysqli_fetch_array($result);
 
@@ -12,12 +12,11 @@
         echo"<script> location.href='join.php';</script>";
     } else{
         // $pwd = hash('sha256', $filtered['pwd']);
-        $sql = "INSERT INTO umaster (uname, pwd, pnum) 
-            VALUES ('{$filtered['uname']}', 
-                    '{$filtered['id']}', 
-                    '{$pass}') ";
+        $sql = "INSERT INTO umaster (id, uname, pwd) 
+            VALUES ('$id', '$uname', '$pwd') ";
         $result= mysqli_query($conn, $sql) or die(mysqli_error($conn).$sql);
     }
+    //db name check
 ?>
 <!Doctype html>
 <html>

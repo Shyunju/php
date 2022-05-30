@@ -9,11 +9,6 @@
             // 화면 커서 이동
             return;
         }
-        /*if (!document.join_form.email.value) {
-            alert("이메일을 입력하세요!");
-            document.join_form.email.focus();
-            return;
-        }*/
         if (!document.join_form.id.value) {
             alert("아이디을 입력하세요!");
             document.join_form.email.focus();
@@ -24,11 +19,6 @@
             document.join_form.pwd.focus();
             return;
         }
-        // if (!document.join_form.pnum.value) {
-        //     alert("전화번호를 입력하세요!");
-        //     document.join_form.pnum.focus();
-        //     return;
-        // }
 
         document.join_form.submit();
         // 모두 확인 후 submit()

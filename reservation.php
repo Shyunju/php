@@ -1,20 +1,14 @@
 <?php
-session_start();
-$conn = mysqli_connect("localhost", "root", "hj990814", "hsquare");
-$sql = "SELECT * FROM umaster WHERE  id={$_SESSION['id']}";
-$result = mysqli_query($conn, $sql) or die(mysqli_error($conn) . $sql);
-$row = mysqli_fetch_array($result);
+// session_start();
+// $conn = mysqli_connect("localhost", "root", "hj990814", "hsquare");
+// $sql = "SELECT * FROM umaster WHERE  id={$_SESSION['id']}";
+// $result = mysqli_query($conn, $sql) or die(mysqli_error($conn) . $sql);
+// $row = mysqli_fetch_array($result);
 
 ?>
 <!DOCTYPE html>
 <script>
     function check_input() {
-        // if (!document.ask_form.intro.value) { // ask_form 이름을 가진 form 안의 yyy 의 value가 없으면
-        //     alert("한줄소개란이 비었습니다.");
-        //     document.ask_form.intro.focus();
-        //     // 화면 커서 이동
-        //     return;
-        // }
         if (!document.ask_form.info.value) {
             alert("시간이 비었습니다.");
             document.ask_form.info.focus();
@@ -25,21 +19,6 @@ $row = mysqli_fetch_array($result);
             document.ask_form.title.focus();
             return;
         }
-        // if (!document.ask_form.theme.value) {
-        //     alert("강연 주제란이 비었습니다.");
-        //     document.ask_form.theme.focus();
-        //     return;
-        // }
-        // if (!document.ask_form.runtime.value) {
-        //     alert("강연 시간란이 비었습니다.");
-        //     document.ask_form.runtime.focus();
-        //     return;
-        // }
-        // if (!document.ask_form.recruit.value) {
-        //     alert("모집인원란이 비었습니다.");
-        //     document.ask_form.recruit.focus();
-        //     return;
-        // }
 
         document.ask_form.submit();
         // 모두 확인 후 submit()
@@ -55,18 +34,17 @@ $row = mysqli_fetch_array($result);
 <body>
     <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a>
     <br>
-    <div id='right_side'>
-        <?php
+    <!-- <div id='right_side'>
+        <php
         echo $_SESSION['uname'] . "님";
         ?>
         <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
 
         <a href="poster_confirm.php"><img src="confirm.png"></a><br>
-    </div>
+    </div> -->
 
     <form action="ask.php" name="ask_form" method="post">
         <section id='right'>
-            <img src="human.png"><br>
             <br>
             <table>
                 <tr>

@@ -89,7 +89,7 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
         }
 
         .table_top {
-            border-top: 15px solid black;
+            border-top: 15px solid #8bc6fa;
         }
 
         td,
@@ -113,6 +113,9 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
         .mine {
             background-color: green;
             color: white;
+        }
+        .info{
+            height :80px;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

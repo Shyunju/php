@@ -120,35 +120,32 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
 </head>
 
 <body>
-    <!-- <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a><br>
-    <div id='right_side'>
-        <?php
-        echo $_SESSION['uname'] . "님";
-        ?>
+    <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a><br>
+    <!-- <div id='right_side'>
         <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
 
         <a href="poster_confirm.php"><img src="confirm.png"></a>
-        <a href="member.php"><img src="small_rev.png"></a><br>
-    </div> -->
+        <a href="member.php"><img src="small_rev.png"></a><br> -->
+    </div>
     <div class="container">
         <table>
             <div class="table_top">
                 <tr align="center">
                     <td>
-                        <a href=<?php echo 'dev_calendar.php?year=' . $preyear . '&month=' . $month . '&day=1'; ?>><img src="next_L2.png"></a>
+                        <a href=<?php echo 'calendar.php?year=' . $preyear . '&month=' . $month . '&day=1'; ?>><img src="d_left.png"></a>
                     </td>
                     <td>
-                        <a href=<?php echo 'dev_calendar.php?year=' . $prev_year . '&month=' . $prev_month . '&day=1'; ?>><img src="next_L.png"></a>
+                        <a href=<?php echo 'calendar.php?year=' . $prev_year . '&month=' . $prev_month . '&day=1'; ?>><img src="left.png"></a>
                     </td>
                     <td height="50" bgcolor="#FFFFFF" colspan="3">
                         <a href=<?php echo 'dev_calendar.php?year=' . $thisyear . '&month=' . $thismonth . '&day=1'; ?>>
                             <?php echo "&nbsp;&nbsp;" . $year . '년 ' . $month . '월 ' . "&nbsp;&nbsp;"; ?></a>
                     </td>
                     <td>
-                        <a href=<?php echo 'dev_calendar.php?year=' . $next_year . '&month=' . $next_month . '&day=1'; ?>><img src="next_R.png"></a>
+                        <a href=<?php echo 'calendar.php?year=' . $next_year . '&month=' . $next_month . '&day=1'; ?>><img src="right.png"></a>
                     </td>
                     <td>
-                        <a href=<?php echo 'dev_calendar.php?year=' . $nextyear . '&month=' . $month . '&day=1'; ?>><img src="next_R2.png"></a>
+                        <a href=<?php echo 'calendar.php?year=' . $nextyear . '&month=' . $month . '&day=1'; ?>><img src="d_right.png"></a>
                     </td>
                 </tr>
             </div>

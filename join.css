@@ -1,0 +1,21 @@
+body {
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  text-align: center;
+  margin-top: 10%;
+  background-color: black;
+}
+
+input {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

@@ -1,9 +1,9 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "hj990814", "hyunju");
+    $con = mysqli_connect("localhost", "root", "hj990814", "hyunju");
 
     $id=$_POST["id"];
     $uname = $_POST["uname"];
-    $pwd =$_POST["pwd"];
+    $pass =$_POST["pwd"];
     // $result = mysqli_query($conn, $sql);
     // $row = mysqli_fetch_array($result);
 
@@ -12,9 +12,10 @@
         echo"<script> location.href='join.php';</script>";
     } else{
         // $pwd = hash('sha256', $filtered['pwd']);
-        $sql = "INSERT INTO umaster (id, uname, pwd) 
-            VALUES ('$id', '$uname', '$pwd') ";
-        $result= mysqli_query($conn, $sql) or die(mysqli_error($conn).$sql);
+        $sql = "INSERT INTO members (id, uname, pass) 
+            VALUES ('$id', '$uname', '$pass') ";
+        mysqli_query($con, $sql);
+        // $result= mysqli_query($conn, $sql) or die(mysqli_error($conn).$sql);
     }
     //db name check
 ?>
@@ -22,6 +23,6 @@
 <html>
     <script> 
     alert('회원가입이 완료되었습니다. 로그인 해주세요.');
-    document.location.href="index.php"; 
+    document.location.href="first.php"; 
     </script>
 </html>

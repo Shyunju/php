@@ -14,9 +14,9 @@
             document.join_form.email.focus();
             return;
         }
-        if (!document.join_form.pwd.value) {
+        if (!document.join_form.pass.value) {
             alert("비밀번호를 입력하세요!");
-            document.join_form.pwd.focus();
+            document.join_form.pass.focus();
             return;
         }
 
@@ -42,7 +42,7 @@ $conn = mysqli_connect("127.0.0.1", "root", "hj990814", "hyunju");
     <form action="join_access.php" name="join_form" method='POST'>
         <input id="name" type="text" name="uname" placeholder="이름 입력"><br>
         <input type="text" name="id" placeholder="아이디 입력"><br>
-        <input type="password" name="pwd" placeholder="비밀번호 입력"><br>
+        <input type="password" name="pass" placeholder="비밀번호 입력"><br>
         <!-- <input type="tel" name="pnum" required pattern='[0-9]{3}-[0-9]{4}-[0-9]{4}' title='###-####-####' placeholder="전화번호 입력"><br> -->
 
         <p>

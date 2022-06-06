@@ -67,8 +67,8 @@ mysqli_query($con, $sql)
                     <td>
                         <select name="yyy">
                             <option selected>년</option>
-                            <option name="2021" value="2021">2022</option>
-                            <option name="2022" value="2022">2023</option>
+                            <option name="2022" value="2022">2022</option>
+                            <option name="2023" value="2023">2023</option>
                         </select>
 
                         <select name="mmm">

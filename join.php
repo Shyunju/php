@@ -34,7 +34,7 @@ $conn = mysqli_connect("127.0.0.1", "root", "hj990814", "hyunju");
     <link type="text/css" rel="stylesheet" href="join.css">
 </head>
 
-<body bgcolor="#D4F4FA">
+<body style="background-color : #D4F4FA">
 
     <p>
         <a href="first.php"><img src="logo.png" width="300px" height="60px"></a>

@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-//$conn = mysqli_connect("localhost", "root", "hj990814", "hsquare");
-// $sql = "SELECT * FROM umaster WHERE  id={$_SESSION['id']}";
+$conn = mysqli_connect("localhost", "root", "hj990814", "hyunju");
+$sql = "SELECT * FROM members WHERE  id={$_SESSION['id']}";
+mysqli_query($conn, $sql);
 // $result = mysqli_query($conn, $sql) or die(mysqli_error($conn) . $sql);
 // $row = mysqli_fetch_array($result);
 
@@ -106,13 +107,17 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
         }
 
         .reserv {
-            background-color: blue;
-            color: white;
+            background-color: #8bc6fa;
+            color: black;
+            text-align: start;
+            font-family: 'Gamja Flower', cursive;
         }
 
         .mine {
-            background-color: green;
+            background-color: #074bf6;
             color: white;
+            text-align: start;
+            font-family: 'Gamja Flower', cursive;
         }
         .info{
             height :80px;
@@ -124,10 +129,9 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
 
 <body>
     <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a><br>
-    <!-- <div id='right_side'>
-        <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
+    <div id='right_side'>
+        <!-- <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
 
-        <a href="poster_confirm.php"><img src="confirm.png"></a>
         <a href="member.php"><img src="small_rev.png"></a><br> -->
     </div>
     <div class="container">
@@ -199,23 +203,25 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
                                 echo '</font>';
                             }
 
-                            // $sql = "SELECT * FROM lec_info WHERE yyy='$year' AND mmm='$month'AND ddd='$day'";
-                            // $result = mysqli_query($conn, $sql);
-                            // $row = mysqli_fetch_array($result);
+                            $sql = "SELECT * FROM todo WHERE yyy='$year' AND mmm='$month'AND ddd='$day'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_array($result);
 
-                            /*if (isset($row)) {
-                                if ($row['umaster_id'] == $_SESSION['id']) {
+                            if (isset($row)) {
+                                if ($row['user_num'] == $_SESSION['id']) {
                     ?>
                                     <br>
-                                    <span class='mine'> 내 예약</span>
+                                    <span class='mine'> <?php echo $row['info']; ?> </span>
+                                    <br>
+                                    <span class='reserv'><?php echo $row['title']; ?>  </span>
                                 <?php
                                 } else {
                                 ?>
                                     <br>
-                                    <span class='reserv'> 예약됨</span>
+                                     
                     <?php
                                 }
-                            }*/
+                            }
                             // 14. 날짜 증가
                             $day++;
                         }

@@ -37,7 +37,7 @@ $conn = mysqli_connect("127.0.0.1", "root", "hj990814", "hyunju");
 <body bgcolor="#D4F4FA">
 
     <p>
-        <a href="index.php"><img src="logo.png" width="300px" height="60px"></a>
+        <a href="first.php"><img src="logo.png" width="300px" height="60px"></a>
     </p>
     <form action="join_access.php" name="join_form" method='POST'>
         <input id="name" type="text" name="uname" placeholder="이름 입력"><br>

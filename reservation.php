@@ -1,26 +1,42 @@
 <?php
-// session_start();
-// $conn = mysqli_connect("localhost", "root", "hj990814", "hsquare");
-// $sql = "SELECT * FROM umaster WHERE  id={$_SESSION['id']}";
-// $result = mysqli_query($conn, $sql) or die(mysqli_error($conn) . $sql);
+session_start();
+$con = mysqli_connect("localhost", "root", "hj990814", "hyunju");
+$sql = "SELECT * FROM members WHERE num={$_SESSION['id']}";
+mysqli_query($con, $sql)
+// $result = mysqli_query($con, $sql) or die(mysqli_error($con) . $sql);
 // $row = mysqli_fetch_array($result);
 
 ?>
 <!DOCTYPE html>
 <script>
     function check_input() {
-        if (!document.ask_form.info.value) {
-            alert("시간이 비었습니다.");
-            document.ask_form.info.focus();
+        if (!document.rev_form.yyy.value) {
+            alert("년도가 비었습니다.");
+            document.rev_form.yyy.focus();
             return;
         }
-        if (!document.ask_form.title.value) {
+        if (!document.rev_form.mmm.value) {
+            alert("달이 비었습니다.");
+            document.rev_form.mmm.focus();
+            return;
+        }
+        if (!document.rev_form.ddd.value) {
+            alert("날이 비었습니다.");
+            document.rev_form.ddd.focus();
+            return;
+        }
+        if (!document.rev_form.info.value) {
+            alert("시간이 비었습니다.");
+            document.rev_form.info.focus();
+            return;
+        }
+        if (!document.rev_form.title.value) {
             alert("목적이 비었습니다.");
-            document.ask_form.title.focus();
+            document.rev_form.title.focus();
             return;
         }
 
-        document.ask_form.submit();
+        document.rev_form.submit();
         // 모두 확인 후 submit()
     }
 </script>
@@ -34,15 +50,15 @@
 <body>
     <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a>
     <br>
-    <!-- <div id='right_side'>
-        <php
+    <div id='right_side'>
+        <!-- <php
         echo $_SESSION['uname'] . "님";
-        ?>
+        ?> 
         <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
         <a href="poster_confirm.php"><img src="confirm.png"></a><br>
     </div> -->
 
-    <form action="ask.php" name="ask_form" method="post">
+    <form action="rev_access.php" name="rev_form" method="post">
         <section id='right'>
             <br>
             <table>
@@ -51,8 +67,8 @@
                     <td>
                         <select name="yyy">
                             <option selected>년</option>
-                            <option name="2021" value="2021">2021</option>
-                            <option name="2022" value="2022">2022</option>
+                            <option name="2021" value="2021">2022</option>
+                            <option name="2022" value="2022">2023</option>
                         </select>
 
                         <select name="mmm">
@@ -107,10 +123,6 @@
                         </select>
                     </td>
                 </tr>
-                <!-- <tr>
-                    <td>강연자 한줄소개 </td>
-                    <td><input class='ta_tx' type="text" name="intro" placeholder="강연자 한줄소개"></td>
-                </tr> -->
                 <tr>
                     <td>시간</td>
                     <td><input class='ta_tx' type="text" name="info" placeholder="일정 예상 시간"></td>
@@ -119,27 +131,12 @@
                     <td>목적 </td>
                     <td><input class='ta_tx' type="text" name="title" placeholder="상세 내용"></td>
                 </tr>
-                <!-- <tr>
-                    <td>강연 주제 </td>
-                    <td><input class='ta_tx' type="text" name="theme" placeholder="강연 주제"></td>
-                </tr>
-                <tr>
-                    <td>강연 런타임 </td>
-                    <td><input class='ta_tx' type="text" name="runtime" placeholder="강연 런타임"></td>
-                </tr>
-                <tr>
-                    <td>모집 인원 </td>
-                    <td><input class='ta_tx' type="text" name="recruit" placeholder="숫자만 입력해 주세요."></td>
-                </tr>
-                <tr>
-                    <td>요구 사항 </td>
-                    <td><input class='ta_tx' type="text" name="hope" placeholder="요구 사항"></td>
-                </tr> -->
+                
             </table>
             <br>
 
-            <input type="hidden" name="umaster_id" value="<?= $_SESSION['id'] ?>">
-            <img src="small_rev.png" onClick="check_input()"></a><br>
+            <input type="hidden" name="num" value="<?= $_SESSION['id'] ?>">
+            <p><img src="rev.png" width="120px" height="40px" onClick="check_input()"></p><br>
         </section>
     </form>
 

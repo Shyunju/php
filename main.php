@@ -19,12 +19,11 @@ $con = mysqli_connect("localhost", "root", "hj990814", "hyunju");
     <p><a href="main.php"><img src="logo.png" width="300px" height="60px"></a></p>
     <?php
     echo $_SESSION['uname'] . "님";
-    ?><br><br>
-    <!-- <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"> -->
+    ?>
+    <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br><br>
 
     <a href="reservation.php"><img src="rev.png" width="250px" height="50px"></a><br><br>
-    <a href="calendar.php"><img src="check.png"></a><br><br>
-    <!-- <a href="video_confirm_thumbnail.php"><img src="v_confirm.png"></a><br><br> -->
+    <a href="calendar.php"><img src="check.png" width="250px" height="50px"></a><br><br>
 
     <script type="text/javascript" src="outcheck.js"></script>
 </body>

@@ -19,3 +19,8 @@ input {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+@font-face {
+  font-family: 'Gamja Flower';
+  src: url('N:\xampp\htdocs\font') format('truetype');
+}

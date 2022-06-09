@@ -13,6 +13,5 @@
         $sql = "INSERT INTO todo (info, title, yyy, mmm, ddd, user_num) 
                 VALUES ('$info', '$title', '$yyy', '$mmm', '$ddd', '$user_num')";
         mysqli_query($conn, $sql);
-        // $result= mysqli_query($conn, $sql) or die(mysqli_error($conn).$sql);
         echo"<script> location.href='calendar.php';</script>";
 ?>

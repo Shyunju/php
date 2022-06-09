@@ -43,7 +43,6 @@ $conn = mysqli_connect("127.0.0.1", "root", "hj990814", "hyunju");
         <input id="name" type="text" name="uname" placeholder="이름 입력"><br>
         <input type="text" name="id" placeholder="아이디 입력"><br>
         <input type="password" name="pass" placeholder="비밀번호 입력"><br>
-        <!-- <input type="tel" name="pnum" required pattern='[0-9]{3}-[0-9]{4}-[0-9]{4}' title='###-####-####' placeholder="전화번호 입력"><br> -->
 
         <p>
             <img src="join.png" width="120px" height="40px" onClick="check_input()">

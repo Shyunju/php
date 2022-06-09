@@ -4,8 +4,6 @@ if ($_SESSION['id'] === null) {
     echo "<script> location.href='first.php';</script>";
 }
 $con = mysqli_connect("localhost", "root", "hj990814", "hyunju");
-// $sql = "SELECT * FROM umaster WHERE id={$_SESSION['id']}";
-// $result = mysqli_query($conn, $sql) or die(mysqli_error($conn) . $sql);
  ?>
 <!DOCTYPE html>
 <html>

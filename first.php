@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php
-// session_start();
-// $conn = mysqli_connect("localhost", "root", "hj990814", "HSQUARE");
-?>
 <html>
 
 <head>

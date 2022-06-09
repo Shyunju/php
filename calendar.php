@@ -4,8 +4,6 @@ session_start();
 $conn = mysqli_connect("localhost", "root", "hj990814", "hyunju");
 $sql = "SELECT * FROM members WHERE  id={$_SESSION['id']}";
 mysqli_query($conn, $sql);
-// $result = mysqli_query($conn, $sql) or die(mysqli_error($conn) . $sql);
-// $row = mysqli_fetch_array($result);
 
 //---- 오늘 날짜
 $thisyear = date('Y'); // 4자리 연도
@@ -130,9 +128,7 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
 <body>
     <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a><br>
     <div id='right_side'>
-        <!-- <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
-
-        <a href="member.php"><img src="small_rev.png"></a><br> -->
+        <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
     </div>
     <div class="container">
         <table>

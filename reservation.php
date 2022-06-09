@@ -3,8 +3,6 @@ session_start();
 $con = mysqli_connect("localhost", "root", "hj990814", "hyunju");
 $sql = "SELECT * FROM members WHERE num={$_SESSION['id']}";
 mysqli_query($con, $sql)
-// $result = mysqli_query($con, $sql) or die(mysqli_error($con) . $sql);
-// $row = mysqli_fetch_array($result);
 
 ?>
 <!DOCTYPE html>
@@ -51,12 +49,11 @@ mysqli_query($con, $sql)
     <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a>
     <br>
     <div id='right_side'>
-        <!-- <php
+        <?php
         echo $_SESSION['uname'] . "님";
         ?> 
         <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
-        <a href="poster_confirm.php"><img src="confirm.png"></a><br>
-    </div> -->
+    </div>
 
     <form action="rev_access.php" name="rev_form" method="post">
         <section id='right'>

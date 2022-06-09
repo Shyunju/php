@@ -89,6 +89,14 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
 
         .table_top {
             border-top: 15px solid #8bc6fa;
+            font-family: 'Gamja Flower', cursive;
+            
+            text-align: center;
+        }
+        .header {
+            height: 110px;
+            font-family: 'Gamja Flower', cursive;
+            font-size : large;
         }
 
         td,
@@ -101,7 +109,7 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
             border-collapse: collapse;
             border: 1px solid black;
             width: 200px;
-            height: 200px;
+            height: 150px;
         }
 
         .reserv {
@@ -109,6 +117,7 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
             color: black;
             text-align: start;
             font-family: 'Gamja Flower', cursive;
+            font-size : medium;
         }
 
         .mine {
@@ -116,9 +125,12 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
             color: white;
             text-align: start;
             font-family: 'Gamja Flower', cursive;
+            font-size : medium;
         }
         .info{
             height :80px;
+            font-family: 'Gamja Flower', cursive;
+            font-size : large;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -128,12 +140,14 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
 <body>
     <a href="main.php" id="logo"><img src="logo.png" width="300px" height="60px"></a><br>
     <div id='right_side'>
-        <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()"><br>
+        <?php echo $_SESSION['uname'] . "님"; ?>
+        <img src="logout.png" width="75px" height="25px" type="button" name="logout" value="logout" onClick="outcheck()">
+        <a href="reservation.php"><img src="rev.png" width="150px" height="30px"></a>        <br>
     </div>
     <div class="container">
         <table>
             <div class="table_top">
-                <tr align="center">
+                <tr class="header">
                     <td>
                         <a href=<?php echo 'calendar.php?year=' . $preyear . '&month=' . $month . '&day=1'; ?>><img src="d_left.png"></a>
                     </td>
@@ -141,8 +155,8 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
                         <a href=<?php echo 'calendar.php?year=' . $prev_year . '&month=' . $prev_month . '&day=1'; ?>><img src="left.png"></a>
                     </td>
                     <td height="50" bgcolor="#FFFFFF" colspan="3">
-                        <a href=<?php echo 'dev_calendar.php?year=' . $thisyear . '&month=' . $thismonth . '&day=1'; ?>>
-                            <?php echo "&nbsp;&nbsp;" . $year . '년 ' . $month . '월 ' . "&nbsp;&nbsp;"; ?></a>
+                        <?php $thisyear . '&month=' . $thismonth . '&day=1'; ?>
+                            <?php echo "&nbsp;&nbsp;" . $year . '년 ' . $month . '월 ' . "&nbsp;&nbsp;"; ?>
                     </td>
                     <td>
                         <a href=<?php echo 'calendar.php?year=' . $next_year . '&month=' . $next_month . '&day=1'; ?>><img src="right.png"></a>

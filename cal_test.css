@@ -3,24 +3,23 @@ body {
   display: table;
   text-align: center;
   margin: 0 auto;
-
-  /*width: 1100px;*/
   font-family: Tahoma;
   font-family: 'Gamja Flower', cursive;
 }
 
 #right_side {
   position: relative;
-  left: 400px;
+  left: 300px;
+  font-family: 'Gamja Flower', cursive;
 }
 #logo {
   position: relative;
   right: 100px;
-  /* margin: 50px; */
   margin-top: 200px;
 }
 
 #calendar {
     margin:0 auto;
     width: 90%;
+    font-family: 'Gamja Flower', cursive;
 }

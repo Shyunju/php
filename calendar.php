@@ -49,7 +49,7 @@ $last_week = date('w', mktime(0, 0, 0, $month, $max_day, $year));
 
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="cal_test.css">
+    <link type="text/css" rel="stylesheet" href="calendar.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

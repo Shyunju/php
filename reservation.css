@@ -2,6 +2,9 @@ body {
     text-align: center;
     width: 1100px;
     font-family: 'Gamja Flower', cursive;
+    position: relative;
+    display: table;
+    margin: 0 auto;
   }
   #right_side {
     position: relative;
@@ -21,10 +24,16 @@ body {
     border: 10px solid #8bc6fa;
     background-color: white;
     border-collapse: collapse;
+    right: 20000px;
+    margin: 0 auto;
     
     font-family: 'Gamja Flower', cursive;
   }
   tr, td{
      border: 10px solid #8bc6fa;
      height : 80px;
+     width: 300px;
+  }
+  .option {
+    width: 200px;
   }

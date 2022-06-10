@@ -42,7 +42,7 @@ mysqli_query($con, $sql)
 
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="test.css">
+    <link type="text/css" rel="stylesheet" href="reservation.css">
 </head>
 
 <body bgcolor="#D4F4FA">
@@ -61,7 +61,7 @@ mysqli_query($con, $sql)
             <table>
                 <div class='table' border="10px" solid #8bc6fa;>
                     <tr>
-                        <td>날짜</td>
+                        <td class="option">날짜</td>
                         <td>
                             <select name="yyy">
                                 <option selected>년</option>
@@ -122,12 +122,14 @@ mysqli_query($con, $sql)
                         </td>
                     </tr>
                     <tr>
-                        <td>시간</td>
-                        <td><input class='ta_tx' type="text" name="info" placeholder="일정 예상 시간"></td>
+                        <td class="option">시간</td>
+                        <td><input class='ta_tx' type="text" name="info" placeholder="일정 예상 시간" 
+                        style="width: 280px; height:60px;"></td>
                     </tr>
                     <tr>
-                        <td>목적 </td>
-                        <td><input class='ta_tx' type="text" name="title" placeholder="상세 내용"></td>
+                        <td class="option">목적 </td>
+                        <td><input class='ta_tx' type="text" name="title" placeholder="상세 내용"
+                         style="width: 280px; height:60px;"></td>
                     </tr>
                 </div>
                 
